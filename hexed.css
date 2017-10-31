@@ -1,0 +1,71 @@
+h1
+{
+	width: 100%;
+	text-align: center;
+}
+
+h2
+{
+	width: 100%;
+	text-align: center;
+}
+
+#startSelect
+{
+	width: 100%;
+	font-size: 22px;
+}
+
+.diff_round
+{
+	margin: auto;
+    width: 35%;
+    text-align: center;
+}
+
+button#hexed
+{
+	display: inline-block;
+	float: right;
+	font-size: 20px;
+}
+
+#gameBlock
+{
+	padding-left: 250px;
+	padding-right: 250px;
+	padding-top: 40px;
+	width: -webkit-fill-available;
+}
+
+#theGame
+{
+	display: inline-block;
+	background-color: grey;
+	width: 70%;
+	height: 300px;
+}
+
+#result_submit
+{
+	display: inline-block;
+	float: right;
+	width: 200px;
+	font-size: 20px;
+	line-height: 40px;
+}
+
+#result
+{
+	width: 150px;
+	margin-left: 40px;
+}
+
+button#submit
+{
+	display: block;
+	float: right;
+	margin-top: 200px;
+	margin-right: 30px;
+	font-size: 20px;
+}
