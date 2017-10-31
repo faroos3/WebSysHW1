@@ -1,11 +1,32 @@
 <html>
 	<head>
+		<link rel="stylesheet" href="hexed.css" type="text/css" />
+		<!--
 		<script type="text/javascript" src="jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="hexed.js"></script>
+		-->
 	</head>
 	<body>
-		<div id="bodyBlock">
-			<p>Here is some a text</p>
+		<div id="timer">Timer: </div>
+		<h1>!Hexxed!</h1>
+		<h2>Guess the Color!</h2>
+		<div id="startSelect">
+			<div class="diff_round" id = "diff">Difficulty</div>
+			<div class="diff_round" id = "round">Total Rounds</div>
+		</div>
+		<div id="gameBlock">
+			<div id="theGame">
+			</div>
+			<div id="result_submit">
+				<div id="result">
+					<div id="round">Round 1 of 10</div>
+					<div id="score">Score: </div>
+				</div>
+				<button id="submit">Check It!</button>
+			</div>
+		</div>
+		<div id="start">
+			<button id="hexed">Start!</button>
 		</div>
 	</body>
 </html>
