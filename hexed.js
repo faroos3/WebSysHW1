@@ -6,5 +6,12 @@
 }(jQuery));
 
 $(document).ready(function() {
+	$("#timer").function(){
+		
+	}; 
+	
+	
 	$("#hexed").hexed();
 });
+
+
