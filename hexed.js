@@ -24,7 +24,7 @@
 
 $(document).ready(function() {
   $("#timer").function(){
-    var begin_t = new Date().getTime(); 
+    var startTime = new Date().getTime(); 
     
   }; 
   $("#hexed").hexed();
