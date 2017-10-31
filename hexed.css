@@ -69,3 +69,15 @@ button#submit
 	margin-right: 30px;
 	font-size: 20px;
 }
+
+#timer
+{
+	position: absolute;
+	top:20px;
+	right: 150px;
+	width: 100px;
+	height: 100px;
+	border: solid black 2px;
+	font-size: 20px;
+	padding: 5px;
+}
