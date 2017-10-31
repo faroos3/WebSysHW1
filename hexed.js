@@ -13,10 +13,10 @@
       var ansG = $('input[id="G"]').val();
       var ansB = $('input[id="B"]').val();
       // score the user
-			var diff = document.getElementById("diff"); // difficulty
-			var err = (abs(R-ansR)+abs(G-ansG)+abs(B-absB))*100/255/3; // error of user's guess
-			$("#score").text(((15000-Date.now()-startTime)*(15-diff-err)/(15-diff)).toFixed(2));
-			// note: assuming #score is an actual element and that startTime is defined
+      var diff = document.getElementById("diff"); // difficulty
+      var err = (abs(R-ansR)+abs(G-ansG)+abs(B-absB))*100/255/3; // error of user's guess
+      $("#score").text(((15000-Date.now()-startTime)*(15-diff-err)/(15-diff)).toFixed(2));
+      // note: assuming #score is an actual element and that startTime is defined
       return false;
     });
   };
