@@ -18,5 +18,9 @@
 }(jQuery));
 
 $(document).ready(function() {
+  $("#timer").function(){
+    var begin_t = new Date().getTime(); 
+    
+  }; 
   $("#hexed").hexed();
 });
