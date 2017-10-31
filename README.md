@@ -1,2 +1,2 @@
-# Web Sys Homework 1 -- Hexxed!
+# Web Sys Homework 1 -- Hexed!
 stuff
