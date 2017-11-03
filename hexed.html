@@ -7,19 +7,21 @@
 		-->
 	</head>
 	<body>
-		<div id="timer">Timer: </div>
+		<div id="timer">Timer: <div id = "minutes">0 m</div><div id = "seconds">0 s</div></div>
 		<h1>!Hexxed!</h1>
 		<h2>Guess the Color!</h2>
 		<div id="startSelect">
-			<div class="diff_round" id = "diff">Difficulty</div>
-			<div class="diff_round" id = "round">Total Rounds</div>
+			<!-- Ahmed told us that the thing that HAS to be jQuery UI is the color slider stuff.
+			 Everything else can be anything. -->
+			<div class="diff_round" id = "diff_div">Difficulty: <input type="number" min = "0" max = "10" value = "5" id = "diff" ></div>
+			<div class="diff_round" id = "round_div">Total Rounds <input type="number" min = "0" value = "10" id = "round"></div>
 		</div>
 		<div id="gameBlock">
 			<div id="theGame">
 			</div>
 			<div id="result_submit">
 				<div id="result">
-					<div id="round">Round 1 of 10</div>
+					<div id="round">Round 1 of 10</div><!-- change this to be JS that updates with the value of id = "round" from input once user hits submit. Every time user hits submit, up the x of y x value +=1 -->
 					<div id="score">Score: </div>
 				</div>
 				<button id="submit">Check It!</button>
@@ -28,5 +30,20 @@
 		<div id="start">
 			<button id="hexed">Start!</button>
 		</div>
+	<script>
+		var seconds_int = 0; 
+		var minutes_int = 0;
+		var current_round = 1; 
+		var myInterval = setInterval(for_seconds, 1000); 
+		function for_seconds(){
+		seconds_int += 1; 
+		
+		document.getElementById("seconds").innerHTML = seconds_int + " s";
+		if (seconds_int%60 == 0){
+			minutes_int += 1;
+			document.getElementById("minutes").innerHTML = minutes_int + " m";
+		}
+		}
+	</script>
 	</body>
 </html>

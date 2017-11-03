@@ -21,11 +21,24 @@
     });
   };
 }(jQuery));
-
+var startTime = new Date().getTime(); 
 $(document).ready(function() {
-  $("#timer").function(){
-    var startTime = new Date().getTime(); 
-    
-  }; 
-  $("#hexed").hexed();
+	$("#hexed").hexed();
 });
+
+//in the submit button, make sure the seconds_int = 0 and the minutes_int = 0
+/* //this should work, take it out of the html once this is ok to be there too. 
+var seconds_int = 0; 
+		var minutes_int = 0;
+		var myInterval = setInterval(for_seconds, 1000); 
+		function for_seconds(){
+		seconds_int += 1; 
+		
+		document.getElementById("seconds").innerHTML = seconds_int + " s";
+		if (seconds_int%60 == 0){
+			minutes_int += 1;
+			document.getElementById("minutes").innerHTML = minutes_int + " m";
+		}
+		}
+
+*/
