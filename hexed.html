@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div id="timer">Timer: <div id = "minutes">0 m</div><div id = "seconds">0 s</div></div>
-		<h1>!Hexxed!</h1>
+		<h1>!Hexed!</h1>
 		<h2>Guess the Color!</h2>
 		<div id="startSelect">
 			<!-- Ahmed told us that the thing that HAS to be jQuery UI is the color slider stuff.
@@ -19,7 +19,7 @@
 
 			 <!--Round and Difficulty -->
 			<div class="diff_round" id = "diff_div">Difficulty: <input type="number" min = "0" max = "10" value = "5" id = "diff" ></div>
-			<div class="diff_round" id = "round_div">Total Rounds: <input type="number" min = "0" value = "10" id = "round"></div>
+			<div class="diff_round" id = "round_div">Total Rounds <input type="number" min = "0" value = "10" id = "round"></div>
 		</div>
 
 		    <!--Sliders-->
@@ -35,7 +35,6 @@
 						<input id="blue-input" value="7f" pattern="[a-fA-F0-9]{2}"/>
 						<input id="checkIt" type="submit" value="Check It!">
 					</form>
-
 				</div>
 				<div id="result_submit">
 					<div id="result">
@@ -49,6 +48,10 @@
 			</div>
 		<script>
 		$( function() {
+			$("#user_input").submit(function(e) {
+			    e.preventDefault();
+			});
+
 			$( "#red" ).slider({
 			  orientation: "horizontal",
 			  max: 255,
