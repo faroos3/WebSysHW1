@@ -50,9 +50,13 @@ button#hexed
 #theGame
 {
 	display: inline-block;
-	background-color: grey;
 	width: 70%;
 	height: 300px;
+}
+
+.ui-widget-content
+{
+	border: none;
 }
 
 #result_submit
@@ -71,11 +75,22 @@ button#hexed
 	margin-left: 40px;
 }
 
-button#submit
+#colorBlock
 {
-	display: block;
+	display: inline-block;
 	float: right;
-	margin-top: 200px;
+	width: 150px;
+	height: 150px;
+	margin-right: 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: grey; /*default color*/
+}
+
+input#checkIt
+{
+	display: inline-block;
+	float: right;
 	margin-right: 30px;
 	font-size: 20px;
 }
@@ -87,7 +102,25 @@ button#submit
 	right: 150px;
 	width: 100px;
 	height: 100px;
-	border: solid black 2px;
+	border: solid grey 2px;
+	border-radius: 10px;
 	font-size: 20px;
 	padding: 5px;
+	text-align: center;
+	line-height: 30px;
 }
+
+
+#red, #green, #blue, #red-input, #green-input, #blue-input {
+	float: left;
+	clear: left;
+	width: 300px;
+	margin: 15px;
+}
+
+#red .ui-slider-range { background: red; }
+#red .ui-slider-handle { border-color: red; }
+#green .ui-slider-range { background: green; }
+#green .ui-slider-handle { border-color: green; }
+#blue .ui-slider-range { background: blue; }
+#blue .ui-slider-handle { border-color: blue; }

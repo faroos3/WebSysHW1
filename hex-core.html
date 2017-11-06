@@ -37,8 +37,13 @@
       value: 127,
       range: "min",
       slide: function( event, ui) {
-    		var value = ui.value; 		
-    		$("#red-input").val(value.toString(16));
+    		var value = ui.value; 
+        var value = value.toString(16);
+        if (value.length < 2) { // if the value is less then 2 digits, add a 0 to the front
+    		$("#red-input").val("0" + value);
+      } else {
+        $("#red-input").val(value);
+      }
     	}
     });   
 
@@ -49,7 +54,12 @@
       value: 127,
       slide: function(event, ui) {
     		var value = ui.value;
-    		$("#green-input").val(value.toString(16));
+        var value = value.toString(16);
+    		if (value.length < 2) {
+        $("#green-input").val("0" + value);
+      } else {
+        $("#green-input").val(value);
+      }
     	}
     });      
 
@@ -60,7 +70,12 @@
       value: 127,
       slide: function(event, ui) {
     		var value = ui.value;
-    		$("#blue-input").val(value.toString(16));
+        var value = value.toString(16);
+    		if (value.length < 2) {
+        $("#blue-input").val("0" + value);
+      } else {
+        $("#blue-input").val(value);
+      }
     	}
     });  
 
