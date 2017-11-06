@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="team1-hw1.css" type="text/css" />
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="team1-hw1.js"></script>
+	</head>
+	<body>
+		<div id="timer">Timer: <div id = "minutes"></div><div id = "seconds">0 s</div></div>
+		<h1>!Hexed!</h1>
+		<h2>Guess the Color!</h2>
+		<div id="startSelect">
+			<!--Round and Difficulty -->
+			<div class="diff_round" id = "diff_div">
+				<label for ="diff">Difficulty: </label>
+				<input id = "diff" name = "diff_value" value = "5" min = "1" max = "10"> 
+			</div>
+			<div class="diff_round" id = "round_div">
+				<label for ="round">Total Rounds: </label>
+				<input id = "round" name = "round_value" value = "10" min = "1"> 
+			
+			</div>
+		</div>
+
+	    <!--Sliders-->
+		<div id="gameBlock">
+		</div>
+		<div id="start">
+			<button id="hexed">Next!</button>
+		</div>
+	</body>
+</html>
