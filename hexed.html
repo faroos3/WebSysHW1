@@ -10,7 +10,7 @@
 		-->
 	</head>
 	<body>
-		<div id="timer">Timer: <div id = "minutes">0 m</div><div id = "seconds">0 s</div></div>
+		<div id="timer">Timer: <div id = "minutes"></div><div id = "seconds">0 s</div></div>
 		<h1>!Hexed!</h1>
 		<h2>Guess the Color!</h2>
 		<div id="startSelect">
@@ -18,8 +18,15 @@
 			 Everything else can be anything. -->
 
 			 <!--Round and Difficulty -->
-			<div class="diff_round" id = "diff_div">Difficulty: <input type="number" min = "0" max = "10" value = "5" id = "diff" ></div>
-			<div class="diff_round" id = "round_div">Total Rounds <input type="number" min = "0" value = "10" id = "round"></div>
+			<div class="diff_round" id = "diff_div">
+				<label for ="diff">Difficulty: </label>
+				<input id = "diff" name = "diff_value" value = "5" min = "1" max = "10"> 
+			</div>
+			<div class="diff_round" id = "round_div">
+				<label for ="round">Total Rounds: </label>
+				<input id = "round" name = "round_value" value = "10" min = "1"> 
+			
+			</div>
 		</div>
 
 		    <!--Sliders-->
@@ -47,6 +54,8 @@
 				<button id="hexed">Next!</button>
 			</div>
 		<script>
+		
+		
 		$( function() {
 			$("#user_input").submit(function(e) {
 			    e.preventDefault();
@@ -130,7 +139,7 @@
 		document.getElementById("seconds").innerHTML = seconds_int + " s";
 		if (seconds_int%60 == 0){
 			minutes_int += 1;
-			document.getElementById("minutes").innerHTML = minutes_int + " m";
+			//document.getElementById("minutes").innerHTML = minutes_int + " m";
 		}
 		}
 		document.getElementById("start").onclick = function(){
@@ -138,9 +147,19 @@
 			minutes_int = 0; 
 			clearInterval(myInterval)
 			document.getElementById("seconds").innerHTML = seconds_int + " s";
-			document.getElementById("minutes").innerHTML = minutes_int + " m";
+			//document.getElementById("minutes").innerHTML = minutes_int + " m";
 			myInterval = setInterval(for_seconds, 1000); 
 		}; 
+		
+		
+		$( function() {
+			//start of the round/difficulty stuff 
+			var d_spinner = $("#diff").spinner(); 
+			var r_spinner = $("#round").spinner(); 
+			
+			
+			//end of the round/difficulty stuff 
+		} ); 
 	</script>
 	</body>
 </html>
