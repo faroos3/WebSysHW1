@@ -1,6 +1,25 @@
 (function($) {
   $.fn.hexed = function(settings) {
-    gameHTML = "front end guys will make this";
+    gameHTML = '<div id="theGame" class="ui-widget-content">';
+    gameHTML += '<div id="colorBlock"></div>';
+    gameHTML += '<form id="user_input">';
+    gameHTML += '<div id="red"></div>';
+    gameHTML += '<input id="red-input" value="7f" pattern="[a-fA-F0-9]{2}"/>';
+    gameHTML += '<div id="green"></div>';
+    gameHTML += '<input id="green-input" value="7f" pattern="[a-fA-F0-9]{2}"/>';
+    gameHTML += '<div id="blue"></div>';
+    gameHTML += '<input id="blue-input" value="7f" pattern="[a-fA-F0-9]{2}"/>';
+    gameHTML += '<input id="checkIt" type="submit" value="Check It!">';
+    gameHTML += '</form>';
+    gameHTML += '</div>';
+    gameHTML += '<div id="result_submit">';
+    gameHTML += '<div id="result">';
+    gameHTML += '<div id="round">Round 1 of 10</div>';
+    gameHTML += '<div id="score">Score: </div>';
+    gameHTML += '</div>';
+    gameHTML += '</div>';
+
+    $('#gameBlock').html(gameHTML);
     startTime = Date.now();
     var R = Math.floor((Math.random() * 256));
     var G = Math.floor((Math.random() * 256));

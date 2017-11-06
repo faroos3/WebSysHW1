@@ -4,10 +4,7 @@
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<!--
-		<script type="text/javascript" src="jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="hexed.js"></script>
-		-->
 	</head>
 	<body>
 		<div id="timer">Timer: <div id = "minutes">0 m</div><div id = "seconds">0 s</div></div>
@@ -24,24 +21,6 @@
 
 		    <!--Sliders-->
 			<div id="gameBlock">
-				<div id="theGame" class="ui-widget-content">
-					<div id="colorBlock"></div>
-					<form id="user_input">
-						<div id="red"></div>
-						<input id="red-input" value="7f" pattern="[a-fA-F0-9]{2}"/>
-						<div id="green"></div>
-						<input id="green-input" value="7f" pattern="[a-fA-F0-9]{2}"/>
-						<div id="blue"></div>
-						<input id="blue-input" value="7f" pattern="[a-fA-F0-9]{2}"/>
-						<input id="checkIt" type="submit" value="Check It!">
-					</form>
-				</div>
-				<div id="result_submit">
-					<div id="result">
-						<div id="round">Round 1 of 10</div><!-- change this to be JS that updates with the value of id = "round" from input once user hits submit. Every time user hits submit, up the x of y x value +=1 -->
-						<div id="score">Score: </div>
-					</div>
-				</div>
 			</div>
 			<div id="start">
 				<button id="hexed">Next!</button>
