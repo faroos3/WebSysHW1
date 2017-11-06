@@ -15,6 +15,7 @@
 			 Everything else can be anything. -->
 
 			 <!--Round and Difficulty -->
+			<!--Round and Difficulty -->
 			<div class="diff_round" id = "diff_div">
 				<label for ="diff">Difficulty: </label>
 				<input id = "diff" name = "diff_value" value = "5" min = "1" max = "10"> 
@@ -26,111 +27,13 @@
 			</div>
 		</div>
 
-		    <!--Sliders-->
-			<div id="gameBlock">
-			</div>
-			<div id="start">
-				<button id="hexed">Next!</button>
-			</div>
+	    <!--Sliders-->
+		<div id="gameBlock">
+		</div>
+		<div id="start">
+			<button id="hexed">Next!</button>
+		</div>
 		<script>
-		
-		
-		$( function() {
-			$("#user_input").submit(function(e) {
-			    e.preventDefault();
-			});
-
-			$( "#red" ).slider({
-			  orientation: "horizontal",
-			  max: 255,
-			  value: 127,
-			  range: "min",
-			  slide: function( event, ui) {
-					var value = ui.value; 
-			    var value = value.toString(16);
-			    if (value.length < 2) { // if the value is less then 2 digits, add a 0 to the front
-					$("#red-input").val("0" + value);
-			  } else {
-			    $("#red-input").val(value);
-			  }
-				}
-			});   
-
-			$( "#green" ).slider({
-			  orientation: "horizontal",
-			  range: "min",
-			  max: 255,
-			  value: 127,
-			  slide: function(event, ui) {
-					var value = ui.value;
-			    var value = value.toString(16);
-					if (value.length < 2) {
-			    $("#green-input").val("0" + value);
-			  } else {
-			    $("#green-input").val(value);
-			  }
-				}
-			});      
-
-			$( "#blue" ).slider({
-			  orientation: "horizontal",
-			  range: "min",
-			  max: 255,
-			  value: 127,
-			  slide: function(event, ui) {
-					var value = ui.value;
-			    var value = value.toString(16);
-					if (value.length < 2) {
-			    $("#blue-input").val("0" + value);
-			  } else {
-			    $("#blue-input").val(value);
-			  }
-				}
-			});  
-
-			$("#red-input").change(function() {//if user changed the input, change the slider
-				var value = parseInt (this.value, 16)//convert hex to decimal(RGB)
-				console.log(this.value); //debug purpose
-				$("#red").slider("value", value);
-			});
-
-			$("#green-input").change(function() {
-				var value = parseInt (this.value, 16)
-				console.log(this.value); 
-				$("#green").slider("value", value);
-			});
-
-			$("#blue-input").change(function() {
-				var value = parseInt (this.value, 16)
-				console.log(this.value); 
-				$("#blue").slider("value", value);
-			});
-
-			} );
-		var seconds_int = 0; 
-		var minutes_int = 0;
-		var current_round = 1; 
-		var myInterval = null; 
-		//var myInterval = setInterval(for_seconds, 1000); 
-		function for_seconds(){
-		seconds_int += 1; 
-		
-		document.getElementById("seconds").innerHTML = seconds_int + " s";
-		if (seconds_int%60 == 0){
-			minutes_int += 1;
-			//document.getElementById("minutes").innerHTML = minutes_int + " m";
-		}
-		}
-		document.getElementById("start").onclick = function(){
-			seconds_int = 0; 
-			minutes_int = 0; 
-			clearInterval(myInterval)
-			document.getElementById("seconds").innerHTML = seconds_int + " s";
-			//document.getElementById("minutes").innerHTML = minutes_int + " m";
-			myInterval = setInterval(for_seconds, 1000); 
-		}; 
-		
-		
 		$( function() {
 			//start of the round/difficulty stuff 
 			var d_spinner = $("#diff").spinner(); 
@@ -139,6 +42,6 @@
 			
 			//end of the round/difficulty stuff 
 		} ); 
-	</script>
+		</script>
 	</body>
 </html>
